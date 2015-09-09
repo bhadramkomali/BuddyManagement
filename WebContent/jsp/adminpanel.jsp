@@ -46,13 +46,14 @@
 		<!-- Tab panes -->
 		<div class="tab-content">
 			<div class="tab-pane active" id="calculate">
-				<h2>Calculate the daily expenses</h2>
+				<h2>Calculate the daily expense</h2>
 				<div id="calculateform">
 					<form action="#" method="post">
 						<table id="calulatetable">
 							<tr>
-								<td class="alnright">Purchaser Buddy:</td>
-								<td><select name="purchaser">
+								<td class="alntable">Purchaser Buddy:</td>
+								<td><select name="purchaser" class="customwidth">
+										<option>--Buddy--</option>
 										<option>bhadram</option>
 										<option>komali</option>
 										<option>bhaskar</option>
@@ -60,12 +61,14 @@
 								</select></td>
 							</tr>
 							<tr>
-								<td class="alnright">Amount Spent:</td>
-								<td><input type="text" name="amountspent" /></td>
+								<td class="alntable">Amount Spent:</td>
+								<td><input type="text" name="amountspent"
+									class="customwidth" /></td>
 							</tr>
 							<tr>
-								<td class="alnright">Applicable Buddies:</td>
-								<td><select name="applicablebuddies" multiple="multiple">
+								<td class="alntable">Applicable Buddies:</td>
+								<td><select name="applicablebuddies" class="customwidth"
+									multiple="multiple">
 										<option>bhadram</option>
 										<option>komali</option>
 										<option>bhaskar</option>
@@ -73,24 +76,25 @@
 								</select></td>
 							</tr>
 							<tr>
-								<td class="alnright">Purpose</td>
-								<td><select name="purpose">
+								<td class="alntable">Purpose</td>
+								<td><select name="purpose" class="customwidth" id="purpose">
+										<option>--Purpose--</option>
 										<option>Curries</option>
 										<option>Internet</option>
 										<option>Gas</option>
 										<option>other</option>
 								</select></td>
 							</tr>
-							<tr style="display: none;">
-								<td class="alnright">Other</td>
-								<td><input type="text" name="other" /></td>
+							<tr style="display: none;" id="hidedrow">
+								<td class="alntable">Other</td>
+								<td><input type="text" name="other" class="customwidth" /></td>
 							</tr>
 							<tr>
-								<td class="alnright">Date:</td>
-								<td><input type="text" id="datepicker"/></td>
+								<td class="alntable">Date:</td>
+								<td><input type="text" id="datepicker" class="customwidth" /></td>
 							</tr>
 							<tr>
-								<td class="alnright"><input type="submit" value="Calculate" /></td>
+								<td class="alntable"><input type="submit" value="Calculate" /></td>
 								<td><input type="reset" value="Cancel" /></td>
 							</tr>
 						</table>
@@ -117,7 +121,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- bootstrap dialogue  for edit-->
 
 	<div id="editModal" class="modal fade">
@@ -171,7 +175,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- boot strap dialogue for add -->
 	<div id="addModal" class="modal fade">
 		<div class="modal-dialog">
@@ -182,10 +186,37 @@
 					<h4 class="modal-title">New User Registration</h4>
 				</div>
 				<div class="modal-body">
-					<p>Here We need to add the new user elements.</p>
+					<form action="#" method="post" onsubmit="">
+						<table id="usertable" align="center">
+							<tr>
+								<td class="alntable">Enter User Name:</td>
+								<td><input type="text" name="username" /></td>
+							</tr>
+							<tr>
+								<td class="alntable">Enter Login Name:</td>
+								<td><input type="text" name="loginname" /></td>
+							</tr>
+							<tr>
+								<td class="alntable">Enter Password:</td>
+								<td><input type="password" name="userpass" /></td>
+							</tr>
+							<tr>
+								<td class="alntable">Re-enter Password:</td>
+								<td><input type="password" name="userrepass" /></td>
+							</tr>
+							<tr>
+								<td class="alntable">Enter email id:</td>
+								<td><input type="text" name="mailid" /></td>
+							</tr>
+							<tr>
+								<td class="alntable">Enter Contact No:</td>
+								<td><input type="text" name="contact" /></td>
+							</tr>
+						</table>
+					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" id="deleterule">Add</button>
+					<button type="button" class="btn btn-primary" id="adduser">Add</button>
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 					<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
 				</div>
