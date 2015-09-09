@@ -10,6 +10,7 @@
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/adminpanel.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 <script
@@ -23,6 +24,7 @@
 <link rel="stylesheet" href="css/jquery.dataTables_themeroller.css">
 <link rel="stylesheet" href="css/jquery.dataTables.css">
 <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
 <link rel="stylesheet" href="css/adminpanel.css">
 <title>::.Buddy-Admin.::</title>
 </head>
@@ -82,6 +84,10 @@
 							<tr style="display: none;">
 								<td class="alnright">Other</td>
 								<td><input type="text" name="other" /></td>
+							</tr>
+							<tr>
+								<td class="alnright">Date:</td>
+								<td><input type="text" id="datepicker"/></td>
 							</tr>
 							<tr>
 								<td class="alnright"><input type="submit" value="Calculate" /></td>
