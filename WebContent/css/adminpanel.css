@@ -29,6 +29,8 @@ img {
     padding-bottom: .5em;
 }
 
-.aligncenter {
-	text-align: center;
+#adduserdiv {
+	position: absolute;
+	top: opx;
+	left: 100px;
 }

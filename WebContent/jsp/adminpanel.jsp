@@ -92,10 +92,10 @@
 				</div>
 			</div>
 			<div class="tab-pane" id="users">
-				<div class="aligncenter">
+				<div id="adduserdiv">
 					<table>
 						<tr>
-							<td>Add a new user:</td>
+							<td><h4>Add a new user:</h4></td>
 							<td><button id="adduser">AddUser</button></td>
 						</tr>
 					</table>
@@ -108,6 +108,81 @@
 			</div>
 			<div class="tab-pane" id="reports">
 				<h2 align="center">Here we need to do the reports part.</h2>
+			</div>
+		</div>
+	</div>
+	
+	<!-- bootstrap dialogue  for edit-->
+
+	<div id="editModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Edit DocumentName</h4>
+				</div>
+				<div class="modal-body">
+					<div align="center" id="section1">
+						<table id="updateTable">
+							<tr>
+								<td align="right"><b>DocumentName:</b></td>
+								<td><input type="text" name="updateddocumentname"
+									id="updateddocumentname"> <input type="hidden"
+									name="editdocumentid" id="editdocumentid"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="editrule">Save</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- boot strap dialogue for delete -->
+
+	<div id="deleteModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Delete Rule</h4>
+				</div>
+				<div class="modal-body">
+					<p>Do you really want to delete this rule?</p>
+					<input type="hidden" name="deletedocumentid" id="deletedocumentid">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="deleterule">Delete</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+					<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- boot strap dialogue for add -->
+	<div id="addModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title">New User Registration</h4>
+				</div>
+				<div class="modal-body">
+					<p>Here We need to add the new user elements.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="deleterule">Add</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+					<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+				</div>
 			</div>
 		</div>
 	</div>
