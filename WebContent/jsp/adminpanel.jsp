@@ -45,70 +45,60 @@
 
 		<!-- Tab panes -->
 		<div class="tab-content">
+			<!-- Calculte Tab -->
 			<div class="tab-pane active" id="calculate">
 				<h2>Calculate the daily expense</h2>
-				<div id="calculateform">
+				<div class="form-style-2">
 					<form action="#" method="post">
-						<table id="calulatetable">
-							<tr>
-								<td class="alntable">Purchaser Buddy:</td>
-								<td><select name="purchaser" class="customwidth">
-										<option>--Buddy--</option>
-										<option>bhadram</option>
-										<option>komali</option>
-										<option>bhaskar</option>
-										<option>dayam</option>
-								</select></td>
-							</tr>
-							<tr>
-								<td class="alntable">Amount Spent:</td>
-								<td><input type="text" name="amountspent"
-									class="customwidth" /></td>
-							</tr>
-							<tr>
-								<td class="alntable">Applicable Buddies:</td>
-								<td><select name="applicablebuddies" class="customwidth"
-									multiple="multiple">
-										<option>bhadram</option>
-										<option>komali</option>
-										<option>bhaskar</option>
-										<option>dayam</option>
-								</select></td>
-							</tr>
-							<tr>
-								<td class="alntable">Purpose</td>
-								<td><select name="purpose" class="customwidth" id="purpose">
-										<option>--Purpose--</option>
-										<option>Curries</option>
-										<option>Internet</option>
-										<option>Gas</option>
-										<option>other</option>
-								</select></td>
-							</tr>
-							<tr style="display: none;" id="hidedrow">
-								<td class="alntable">Other</td>
-								<td><input type="text" name="other" class="customwidth" /></td>
-							</tr>
-							<tr>
-								<td class="alntable">Date:</td>
-								<td><input type="text" id="datepicker" class="customwidth" /></td>
-							</tr>
-							<tr>
-								<td class="alntable"><input type="submit" value="Calculate" /></td>
-								<td><input type="reset" value="Cancel" /></td>
-							</tr>
-						</table>
+						<label for="purchasebuddy"> 
+						<span>Purchased Buddy<span class="required">*</span></span> 
+						<select name="purchasebuddy" class="select-field">
+								<option>--Buddy--</option>
+								<option>bhadram</option>
+								<option>komali</option>
+								<option>bhaskar</option>
+								<option>dayam</option>
+						</select>
+						</label>
+						<label for="amountspent"> 
+							<span>Amount Spent<span class="required">*</span></span> 
+							<input type="text" class="input-field" name="amountspent" value="" />
+						</label> 
+						<label for="applicablebuddies"> 
+							<span>Applicable buddies<span class="required">*</span></span> 
+							<select name="applicablebuddies" class="select-field" multiple="multiple">
+									<option>bhadram</option>
+									<option>komali</option>
+									<option>bhaskar</option>
+									<option>dayam</option>
+							</select>
+						</label>
+						<label for="purpose"> 
+							<span>Purpose<span class="required">*</span></span> 
+							<select name="purpose" class="select-field">
+								<option>--Purpose--</option>
+								<option>Curries</option>
+								<option>Internet</option>
+								<option>Gas</option>
+								<option>other</option>
+							</select>
+						</label>
+						<label for="date"> <span>Date<span class="required">*</span></span>
+							<input type="text" class="input-field" name="date" value="" />
+						</label> 
+						<label>
+							<input type="submit" value="Submit" /> <span>&nbsp;</span>
+							<input type="reset" value="Cancel" />
+						</label>
 					</form>
 				</div>
 			</div>
+			<!-- User Tab -->
 			<div class="tab-pane" id="users">
 				<div id="adduserdiv">
-					<table>
-						<tr>
-							<td><h4>Add a new user:</h4></td>
-							<td><button id="adduser">AddUser</button></td>
-						</tr>
-					</table>
+					<div class="form-style-2">
+							<input type="submit" class="inuput-button" name="adduser" value="AddUser" id="adduser"/>
+					</div>
 				</div>
 				<div id="existingusers">
 					<h2>Existing Users</h2>
@@ -116,13 +106,14 @@
 				</div>
 
 			</div>
+			<!-- Reports Tab -->
 			<div class="tab-pane" id="reports">
 				<h2 align="center">Here we need to do the reports part.</h2>
 			</div>
 		</div>
 	</div>
 
-	<!-- bootstrap dialogue  for edit-->
+	<!-- bootstrap dialogue  for edit user-->
 
 	<div id="editModal" class="modal fade">
 		<div class="modal-dialog">
@@ -153,7 +144,7 @@
 		</div>
 	</div>
 
-	<!-- boot strap dialogue for delete -->
+	<!-- boot strap dialogue for delete user -->
 
 	<div id="deleteModal" class="modal fade">
 		<div class="modal-dialog">
@@ -176,7 +167,7 @@
 		</div>
 	</div>
 
-	<!-- boot strap dialogue for add -->
+	<!-- boot strap dialogue for add user -->
 	<div id="addModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -186,39 +177,38 @@
 					<h4 class="modal-title">New User Registration</h4>
 				</div>
 				<div class="modal-body">
-					<form action="#" method="post" onsubmit="">
-						<table id="usertable" align="center">
-							<tr>
-								<td class="alntable">Enter User Name:</td>
-								<td><input type="text" name="username" /></td>
-							</tr>
-							<tr>
-								<td class="alntable">Enter Login Name:</td>
-								<td><input type="text" name="loginname" /></td>
-							</tr>
-							<tr>
-								<td class="alntable">Enter Password:</td>
-								<td><input type="password" name="userpass" /></td>
-							</tr>
-							<tr>
-								<td class="alntable">Re-enter Password:</td>
-								<td><input type="password" name="userrepass" /></td>
-							</tr>
-							<tr>
-								<td class="alntable">Enter email id:</td>
-								<td><input type="text" name="mailid" /></td>
-							</tr>
-							<tr>
-								<td class="alntable">Enter Contact No:</td>
-								<td><input type="text" name="contact" /></td>
-							</tr>
-						</table>
-					</form>
+					<div class="form-style-2">
+						<form action="#" method="post" onsubmit="">
+							<label for="username"> 
+								<span>User Name<span class="required">*</span></span> 
+								<input type="text" class="input-field" name="username" value="" />
+							</label> 
+							<label for="loginname"> 
+								<span>Login Name<span class="required">*</span></span> 
+								<input type="text" class="input-field" name="loginname" value="" />
+							</label>
+							<label for="password"> 
+								<span>Password<span class="required">*</span></span> 
+								<input type="password" class="input-field" name="password" value="" />
+							</label>
+							<label for="repassword"> 
+								<span>Re-Password<span class="required">*</span></span> 
+								<input type="password" class="input-field" name="repassword" value="" />
+							</label>
+							<label for="phone"> 
+								<span>Phone No</span> 
+								<input type="text" class="input-field" name="phone" value="" />
+							</label>
+							<label for="email"> 
+								<span>Em@il</span> 
+								<input type="text" class="input-field" name="email" value="" />
+							</label>
+						</form>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-primary" id="adduser">Add</button>
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-					<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
 				</div>
 			</div>
 		</div>
